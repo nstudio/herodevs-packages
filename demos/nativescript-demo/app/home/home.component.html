@@ -1,0 +1,6 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<StackLayout class="p-20">
+  <Label text="Lazy Load Module on Demand" class="h2 text-center"></Label>
+  <Button text="Load It!" (tap)="load = true" class="btn btn-primary btn-active"></Button>
+  <lazy-af *ngIf="load" [moduleName]="moduleName"></lazy-af>
+</StackLayout>

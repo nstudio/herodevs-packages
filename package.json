@@ -15,29 +15,31 @@
     "npm-pack-dynamic": "cd dist/dynamic-service && npm pack",
     "package-lazy": "npm run build-lazy && npm run npm-pack-lazy",
     "package-dynamic": "npm run build-dynamic && npm run npm-pack-dynamic",
-    "package": "npm run package-dynamic && npm run package-lazy"
+    "package": "npm run package-dynamic && npm run package-lazy",
+    "demo-nativescript": "npm run build-dynamic && npm run build-lazy && cd demos/nativescript-demo && tns run ios --emulator --bundle",
+    "demo-clean": "cd demos/nativescript-demo && npx rimraf -- hooks node_modules platforms package-lock.json"
   },
   "private": false,
   "dependencies": {
-    "@angular/animations": "^6.1.0",
-    "@angular/common": "^6.1.0",
-    "@angular/compiler": "^6.1.0",
-    "@angular/core": "^6.1.0",
-    "@angular/forms": "^6.1.0",
-    "@angular/http": "^6.1.0",
-    "@angular/platform-browser": "^6.1.0",
-    "@angular/platform-browser-dynamic": "^6.1.0",
-    "@angular/router": "^6.1.0",
+    "@angular/animations": "~7.2.0",
+    "@angular/common": "~7.2.0",
+    "@angular/compiler": "~7.2.0",
+    "@angular/core": "~7.2.0",
+    "@angular/forms": "~7.2.0",
+    "@angular/http": "~7.2.0",
+    "@angular/platform-browser": "~7.2.0",
+    "@angular/platform-browser-dynamic": "~7.2.0",
+    "@angular/router": "~7.2.0",
     "core-js": "^2.5.4",
-    "rxjs": "~6.2.0",
+    "rxjs": "~6.3.2",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "~0.8.0",
-    "@angular-devkit/build-ng-packagr": "~0.8.0",
-    "@angular/cli": "~6.2.2",
-    "@angular/compiler-cli": "^6.1.0",
-    "@angular/language-service": "^6.1.0",
+    "@angular-devkit/build-angular": "~0.13.1",
+    "@angular-devkit/build-ng-packagr": "~0.13.1",
+    "@angular/cli": "~7.2.0",
+    "@angular/compiler-cli": "~7.2.0",
+    "@angular/language-service": "~7.2.0",
     "@types/jasmine": "~2.8.8",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",
@@ -58,7 +60,7 @@
     "tsickle": ">=0.29.0",
     "tslib": "^1.9.0",
     "tslint": "~5.11.0",
-    "typescript": "~2.9.2"
+    "typescript": "~3.1.6"
   },
   "lint-staged": {
     "*.{ts,tsx}": [

@@ -168,6 +168,12 @@
           }
         }
       }
+    },
+    "nativescript-demo": {
+      "root": "demos/nativescript-demo",
+      "sourceRoot": "demos/nativescript-demo",
+      "projectType": "application",
+      "prefix": "app"
     }
   },
   "defaultProject": "lazyloading"
